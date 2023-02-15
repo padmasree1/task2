@@ -3,6 +3,7 @@ pipeline{
  options{
  skipDefaultCheckout true 
  }
+ if(env.BRANCH_NAME == 'dev'){
  stages{
    
    stage("check file"){
@@ -12,7 +13,7 @@ pipeline{
    }
  }
 }
-   
+}   
    
    
    
