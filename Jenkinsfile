@@ -3,7 +3,9 @@ pipeline{
  options{
  skipDefaultCheckout true 
  }
- if(env.BRANCH_NAME == 'main'){
+when {
+expression(params.branchname="main")
+}
  stages{
    
    stage("check file"){
