@@ -11,7 +11,7 @@ expression{ "params.branchname" == "main" }
 
 }
      steps{
-      sh "cat mail.txt"
+      echo "changes in main branch"
      }
    }
  }
