@@ -7,7 +7,8 @@ pipeline{
  stages{
     stage("check file"){
     when {
-expression(params.branchname=="main")
+expression{ "params.branchname" == "main" } 
+
 }
      steps{
       sh "cat mail.txt"
@@ -15,8 +16,3 @@ expression(params.branchname=="main")
    }
  }
 }
-
-   
-   
-   
-   
