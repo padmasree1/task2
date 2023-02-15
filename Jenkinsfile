@@ -5,7 +5,7 @@ pipeline {
              steps {
           
 
-       sh "docker run --name web-server1 -d -p 70:70 apache:V1"
+       sh "docker run --name web-server1 -d -p 70:70 apache"
             }
         }
     }
