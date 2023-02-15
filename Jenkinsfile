@@ -1,19 +1,15 @@
-pipeline{
- agent any
- options{
- skipDefaultCheckout true 
- }
- if(env.BRANCH_NAME == 'dev'){
- stages{
-   
-   stage("check file"){
-     steps{
-      sh "cat mail.txt"
-     }
-   }
- }
+pipeline {
+    agent any
+    stages {
+        stage("deploye") {
+            when {
+                branch "dev*"
+            }
+            steps {
+                
+
+       sh "docker run --name web-server1 -d -p 70:70 apache:V1"
+            }
+        }
+    }
 }
-}   
-   
-   
-   
