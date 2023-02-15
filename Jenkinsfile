@@ -3,12 +3,12 @@ pipeline{
  options{
  skipDefaultCheckout true 
  }
-when {
-expression(params.branchname="main")
-}
+
  stages{
-   
-   stage("check file"){
+    stage("check file"){
+    when {
+expression(params.branchname=="main")
+}
      steps{
       sh "cat mail.txt"
      }
